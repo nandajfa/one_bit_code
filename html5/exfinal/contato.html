@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contato</title>
+</head>
+
+<body>
+
+	<header>
+		<nav role="navigation" aria-label="Navegação">
+			<strong>Escritório de Contabilidade ABC</strong><br>
+			<a href="./index.html">Início</a> |
+			<a href="./sobre.html">Sobre Nós</a> |
+			<a href="./servicos.html">Serviços</a> |
+			<a href="./contato.html">Contato</a> |
+			<hr>
+		</nav>
+	</header>
+	<main>
+		<section role="region" aria-label="Contato">
+			<h1>Contato</h1>
+			<p>Entre em contato conosco para obter mais informações ou agendar uma reunião para
+				discutir suas necessidades contábeis. Nossa equipe está pronta para ajudá-lo.</p>
+		</section>
+		<section role="region" aria-label="Informações de contato">
+			<h2>Informações de contato</h2>
+			<address>
+				<ul>
+					<li>Email: contato@escritorio.com</li>
+					<li>Telefone: (11) 91234-4321</li>
+					<li>Endereço: Rua das flores, 123 -> São Paulo - SP</li>
+				</ul>
+			</address>
+		</section>
+		<section role="region" aria-label="Horário de atendimento">
+			<h2>Horário de atendimento</h2>
+			<p>Segunda a Sexta-feira, das 8h às 18h.</p>
+		</section>
+		<section>
+			<h2>Envie uma mensagem</h2>
+			<form role="form" aria-label="Formulário de contato" aria-describedby="form-description">
+				<label for="nome">Nome:</label>
+				<input type="text" id="nome" name="nome" aria-label=" Campo de Nome" required aria-required="true">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" aria-label="Campo de Email" required aria-required="true">
+				<label for="mensagem">Mensagem:</label>
+				<textarea name="mensagem" id="mensagem" aria-label="Campo de Mensagem" cols="40" rows="05"></textarea>
+				<button type="submit">Enviar Mensagem</button>
+
+				<!-- <p id="form-description" aria-hidden="true">
+					Este formulário é usado para enviar uma mensagem para a Contabilidade.
+				</p> -->
+			</form>
+		</section>
+	</main>
+	<hr>
+	<footer role="contentinfo" aria-label="Rodapé">
+		<p>&copy; 2023 Escritório de Contabilidade ABC</p>
+	</footer>
+</body>
+
+</html>
