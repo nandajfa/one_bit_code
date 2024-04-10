@@ -14,6 +14,11 @@ function menu() {
 }
 
 function listarVagas() {
+  if (vagas.length == 0) {
+    alert('Não há vagas disponíveis')
+    return
+  }
+
   const vagasEmTexto = vagas.reduce((textoFinal, vaga, indice) => {
     textoFinal += indice + '. '
     textoFinal += vaga.nome
@@ -48,8 +53,13 @@ function criarVaga() {
 
 function visualizarVaga() {
   const indice = prompt('Informe o índice da vaga que deseja exibir:')
-  const vaga = vagas[indice]
 
+  if (indice >= vagas.length || indice < 0) {
+    alert('Índice inválido')
+    return
+  }
+
+  const vaga = vagas[indice]
   const candidatosEmTexto = vaga.candidatos.reduce(
     (textoFinal, candidato) => textoFinal + '\n - ' + candidato,
     ''
@@ -128,9 +138,7 @@ function executar() {
 
     switch (opcao) {
       case '1':
-        if (vagas.length == 0) {
-          alert('Não há vagas disponíveis')
-        } else alert(listarVagas())
+        listarVagas()
         break
       case '2':
         criarVaga()
